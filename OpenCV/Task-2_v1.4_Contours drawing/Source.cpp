@@ -11,29 +11,29 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
+	setlocale(LC_ALL, "Russian");  //setlocale - позволяет настраивать локальные параметры (LC_ALL - применяется для всей программы, "Russian" - установка русского языка)
 
-	char filename[80];
-	cout << "Введите имя файла, в который хотите внести измеениея, и нажмите Enter" << endl;
-	cin.getline(filename, 80);
-	cout << "Открыть файл";
-	cout << filename << endl;
+	char filename[80];  //создание переменной символьного типа [максимальное кол-во символов - 80]
+	cout << "Введите имя файла, в который хотите внести измеениея, и нажмите Enter" << endl;    //вывод в консоль << "Выводимые данные" << переход на новую строку;
+	cin.getline(filename, 80);  //получение значения, введенного пользователем.запись в переменную(переменная, макс. кол-во символов);
+	cout << "Открыть файл ";  //вывод в консоль << "Открыть файл ";
+	cout << filename << endl;  //вывод в консоль << переменная с именем файла << переход на новую строку;
 
 
 	//IMAGE UPLOAD
-	Mat img = imread(filename, 1);
-	imshow("Исходное изображение", img);
+	Mat img = imread(filename, 1);  //создание матрицы с именем img = чтение файла(имя файла, тип вывода цвета - 1 = IMREAD_COLOR - всегда конвертировать изображение в трехканальное цветное изображение BGR);
+	imshow("Исходное изображение", img);  //вывод изображения(имя окна, выводимая матрица);
 
 
 	//CANNY
-	Mat src_gray;
-	Mat canny_output;
+	Mat src_gray;  //создание пустой матрицы с именем src_gray;
+	Mat canny_output; //создание пустой матрицы с именем canny_output;
 
-	cvtColor(img, src_gray, COLOR_RGB2GRAY);
-	blur(src_gray, src_gray, Size(3, 3));
+	cvtColor(img, src_gray, COLOR_RGB2GRAY);  //конвертация цвета(входное изображение, матрица для записи выходного изображения, тип конвертации - rgb в серое);
+ 	blur(src_gray, src_gray, Size(3, 3));  //размытие изображения для сглаживания контуров(входное изображение, матрица для записи результата, степень размытия);
 
-	double otsu_thresh_val = threshold(src_gray, img, 0, 255, THRESH_BINARY | THRESH_OTSU);
-	double height_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;
+	double otsu_thresh_val = threshold(src_gray, img, 0, 255, THRESH_BINARY | THRESH_OTSU);  //интенсивнсть градации серого, определение первого плана
+	double height_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;  //
 
 	cout << otsu_thresh_val;
 
