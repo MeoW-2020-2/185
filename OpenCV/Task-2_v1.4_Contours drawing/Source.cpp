@@ -13,8 +13,15 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
+	char filename[80];
+	cout << "Введите имя файла, в который хотите внести измеениея, и нажмите Enter" << endl;
+	cin.getline(filename, 80);
+	cout << "Открыть файл";
+	cout << filename << endl;
+
+
 	//IMAGE UPLOAD
-	Mat img = imread("grib.png", 1);
+	Mat img = imread(filename, 1);
 	imshow("Исходное изображение", img);
 
 
