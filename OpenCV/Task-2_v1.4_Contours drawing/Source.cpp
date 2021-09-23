@@ -32,7 +32,7 @@ int main()
 	cvtColor(img, src_gray, COLOR_RGB2GRAY);  //конвертация цвета(входное изображение, матрица для записи выходного изображения, тип конвертации - rgb в серое);
  	blur(src_gray, src_gray, Size(3, 3));  //размытие изображения для сглаживания контуров(входное изображение, матрица для записи результата, степень размытия);
 
-	double otsu_thresh_val = threshold(src_gray, img, 0, 255, THRESH_BINARY | THRESH_OTSU);  //интенсивнсть градации серого, определение первого плана
+	double otsu_thresh_val = threshold(src_gray, img, 0, 255, THRESH_BINARY | THRESH_OTSU);  //определения порога изображения
 	double height_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;  //
 
 	cout << otsu_thresh_val;
