@@ -35,7 +35,7 @@ int main()
 	double otsu_thresh_val = threshold(src_gray, img, 0, 255, THRESH_BINARY | THRESH_OTSU);  //определения порога изображения
 	double height_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;  //
 
-	cout << otsu_thresh_val;
+	cout << otsu_thresh_val;  //вывод значения
 
 	Canny(src_gray, canny_output, lower_thresh_val, height_thresh_val, 3);
 
