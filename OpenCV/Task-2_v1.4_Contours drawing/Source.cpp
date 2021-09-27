@@ -37,7 +37,7 @@ int main()
 
 	cout << otsu_thresh_val;  //вывод значения
 
-	Canny(src_gray, canny_output, lower_thresh_val, height_thresh_val, 3);
+	Canny(src_gray, canny_output, lower_thresh_val, height_thresh_val, 3);  //обнаружения краев изображения(исходное изображение, результат, нижний порог, верхний порог, размер апертуры для оператора Sobel);
 
 	//char* source_gray_window = "Серое изображение";
 	namedWindow("Серое изображение", WINDOW_AUTOSIZE);
