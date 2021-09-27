@@ -46,11 +46,11 @@ int main()
 
 
 	//FINDCOUNTOUTS
-	RNG rng(12345);
+	RNG rng(12345);  //генерация случайного числа
 	vector<vector<Point>>contours;
 	vector<Vec4i>hierarchy;
 
-	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE, Point(0, 0));
+	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE, Point(0, 0));  //нахождение контуров
 
 	vector<Moments>mu(contours.size());
 	for (int i = 0; i < contours.size(); i++) {
@@ -68,12 +68,12 @@ int main()
 
 
 	//CONTOURS DRAWING
-	Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);
+	Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);  //CV_8UC3 - трехканальное изображение
 
 	for (int i = 0; i < contours.size(); i++) {
-		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
-		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, Point());
-		circle(drawing, mc[i], 4, color, -1, 5, 0);
+		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));  //задание цвета
+		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, Point());  //рисование контуров
+		circle(drawing, mc[i], 4, color, -1, 5, 0);  //рисование точек
 	}
 
 	namedWindow("Контуры", WINDOW_AUTOSIZE);
