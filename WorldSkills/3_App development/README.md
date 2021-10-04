@@ -11,3 +11,11 @@ Desktop application. Программное обеспечение, предна
 
 **Элемент управления**  
 Control. Элемент, который предназначен для взаимодействия с пользователем или для отображения ему какой-либо информации.
+
+<br/>
+
+---
+
+## Результат
+![Result-1](https://github.com/MeoW-2020-2/185/blob/main/WorldSkills/3_App%20development/Result-1.png)
+![Result-2](https://github.com/MeoW-2020-2/185/blob/main/WorldSkills/3_App%20development/Result-2.png)
