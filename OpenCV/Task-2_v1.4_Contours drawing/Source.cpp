@@ -33,7 +33,7 @@ int main()
  	blur(src_gray, src_gray, Size(3, 3));  //размытие изображения для сглаживания контуров(входное изображение, матрица для записи результата, степень размытия);
 
 	double otsu_thresh_val = threshold(src_gray, img, 0, 255, THRESH_BINARY | THRESH_OTSU);  //определения порога изображения
-	double height_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;  //
+	double height_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;
 
 	cout << otsu_thresh_val;  //вывод значения
 
@@ -50,7 +50,7 @@ int main()
 	vector<vector<Point>>contours;
 	vector<Vec4i>hierarchy;
 
-	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE, Point(0, 0));  //нахождение контуров
+	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE, Point(0, 0));  //нахождение контуров(исходное изображение, найденные контуры, индекс контура, режим группировки (RETR_TREE - группировкигруппировка контуров в многоуровневую иерархию), метод упаковки (CHAIN_APPROX_NONE - упаковка отсутствует и все контуры хранятся в виде отрезков), точки начала и конца);
 
 	vector<Moments>mu(contours.size());
 	for (int i = 0; i < contours.size(); i++) {
@@ -71,9 +71,9 @@ int main()
 	Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);  //CV_8UC3 - трехканальное изображение
 
 	for (int i = 0; i < contours.size(); i++) {
-		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));  //задание цвета
+		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));  //задание цвета (rng.uniform - рандомное число от 0 до 255)
 		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, Point());  //рисование контуров
-		circle(drawing, mc[i], 4, color, -1, 5, 0);  //рисование точек
+		circle(drawing, mc[i], 4, color, -1, 5, 0);  //рисование точек (изображение на котором будут точки, центры точек, радиус, цвет, толщина контура круга (отрицательная толщина - закрашенный круг), тип границы круга, сдвиг от центра);
 	}
 
 	namedWindow("Контуры", WINDOW_AUTOSIZE);
