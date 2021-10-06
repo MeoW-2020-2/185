@@ -63,12 +63,12 @@ int main()
 	}
 
 	for (int i = 0; i < contours.size(); i++) {
-		printf("Контур №%d: центр масс - x = %.2f y = %.2f; длина - %.2f \n", i, mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true));  //пока возможно найти контур - выводить его центр
+		printf("Контур №%d: центр масс - x = %.2f y = %.2f; длина - %.2f \n", i, mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true));  //пока возможно найти контур - выводить его центр масс и длину
 	}
 
 
 	//CONTOURS DRAWING
-	Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);  //CV_8UC3 - трехканальное изображение
+	Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3);  //создание матрицы, CV_8UC3 - трехканальное изображение
 
 	for (int i = 0; i < contours.size(); i++) {
 		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));  //задание цвета (rng.uniform - рандомное число от 0 до 255)
