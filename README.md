@@ -17,3 +17,5 @@ ___OpenCV (работа с изображением):___
     - Найти контур изображения, используя оператор `findCounturs` (найти моменты и центр масс)
 2. Найти границы объекта на видео
 3. Применить эти функции для опеределения дорожноё разметки
+---
+https://docs.google.com/presentation/d/1dJvan9CLZMceRECjAOUwTuOSeVG5x5giPiLobkPFtDo/edit#slide=id.gf4f7a9eb46_0_0
