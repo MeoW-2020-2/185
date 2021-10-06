@@ -54,7 +54,7 @@ int main()
 
 	vector<Moments>mu(contours.size());
 	for (int i = 0; i < contours.size(); i++) {
-		mu[i] = moments(contours[i], false);
+		mu[i] = moments(contours[i], false);  //нахождение центра масс
 	}
 
 	vector<Point2f>mc(contours.size());
