@@ -23,3 +23,18 @@
 ***Push*** — отправка на сервер, в удаленный репохиторий.  
 - для работы в команде, чтобы делиться своим кодом с коллегами  
 - чтобы иметь резервную копию на случай потери данных на своей машине  
+
+---
+
+**Клонирование:**  
+$ git clone [repo url]  
+
+**Добавление:**  
+$ git init  
+$ git status  
+$ git add .  
+$ git commit -m "[commit text]"  
+$ git remote add origin [repo url]  
+$ git push https://[username]:[token][repo url]
+
+
