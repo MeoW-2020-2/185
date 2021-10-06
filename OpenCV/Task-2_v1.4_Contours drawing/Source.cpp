@@ -63,7 +63,7 @@ int main()
 	}
 
 	for (int i = 0; i < contours.size(); i++) {
-		printf("Контур №%d: центр масс - x = %.2f y = %.2f; длина - %.2f \n", i, mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true));
+		printf("Контур №%d: центр масс - x = %.2f y = %.2f; длина - %.2f \n", i, mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true));  //пока возможно найти контур - выводить его центр
 	}
 
 
