@@ -1,3 +1,4 @@
+https://github.com/Julia-Zhirnova/Android.git
 ## Глоссарий
 **API**  
 Application programming interface. Интерфейс, позволяющий двум независимым компонентам программного обеспечения обмениваться информацией.
