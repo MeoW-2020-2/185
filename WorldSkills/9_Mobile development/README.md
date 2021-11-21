@@ -1,4 +1,8 @@
 https://github.com/Julia-Zhirnova/Android.git
+
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-bin.zip
+ classpath "com.android.tools.build:gradle:7.0.0"
+ 
 ## Глоссарий
 **API**  
 Application programming interface. Интерфейс, позволяющий двум независимым компонентам программного обеспечения обмениваться информацией.
