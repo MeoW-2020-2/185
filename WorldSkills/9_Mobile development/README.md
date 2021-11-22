@@ -1,4 +1,9 @@
 https://github.com/Julia-Zhirnova/Android.git
+
+UPDATE HotelImage SET HotelImage.ImageSource =  CONVERT(varbinary(MAX), 'C:\...')
+
+----
+
 ## Глоссарий
 **API**  
 Application programming interface. Интерфейс, позволяющий двум независимым компонентам программного обеспечения обмениваться информацией.
