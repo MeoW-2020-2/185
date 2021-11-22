@@ -1,6 +1,6 @@
 https://github.com/Julia-Zhirnova/Android.git
 
-UPDATE HotelImage SET HotelImage.ImageSource =  CONVERT(varbinary(MAX), 'C:\\')
+UPDATE HotelImage SET HotelImage.ImageSource =  CONVERT(varbinary(MAX), 'C:\\...')
 
 ----
 
