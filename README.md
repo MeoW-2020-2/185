@@ -1,5 +1,3 @@
-## Учебная практика
-__https://github.com/Julia-Zhirnova/Uchebnaya_praktika_185.git__
 ## Практическая работа  
 
 ___Тестирование:___
