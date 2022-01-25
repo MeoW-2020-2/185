@@ -15,4 +15,4 @@
 
 ### Каркас приложения
 
-![ResultImg](./diagram.png)
+![ResultImg](./App-1.png)
